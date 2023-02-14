@@ -417,13 +417,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a0c2a9d76957ca498c5ab28040676de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1330729021}
-  speed: 0.1
+  m_speed: 10
 --- !u!1 &1144577665
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,11 +471,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9784ad42fa028c346bb9a86378cc9b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Rb: {fileID: 0}
-  jumpForce: 100
+  m_Rb: {fileID: 0}
+  m_jumpForce: 100
   generateMap: {fileID: 1707364212}
-  isMove: 0
-  facing: 0
+  m_isMove: 0
+  m_facing: 0
 --- !u!1 &1639382240
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,8 +600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5072d36c5e1304796c0b60604247d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistanceFromPlayer: 60
-  maxTerrainCount: 50
+  m_minDistanceFromPlayer: 60
+  m_maxTerrainCount: 50
   terrainDatas:
   - {fileID: 11400000, guid: 08e4d90d270337a40bcd40cfe0898bfd, type: 2}
   - {fileID: 11400000, guid: 80932038b76110b4eb23607492a93010, type: 2}
