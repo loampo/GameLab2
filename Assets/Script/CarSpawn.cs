@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CarSpawn : MonoBehaviour
 {
-    public GameObject m_vehicle;
-    public GameObject m_vehicle2;
+    public List<GameObject> m_carsList = new List<GameObject>();
     public Transform m_spawnPoint;
     public Transform m_spawnPoint2;
     public float m_minTime;
     public float m_maxTime;
+    private int m_cars = 100;
 
 
     private void Start()
@@ -19,16 +19,23 @@ public class CarSpawn : MonoBehaviour
 
     private IEnumerator SpawnVehicle()
     {
+      
+        int m_random = Random.Range(0, 100);
+        int witchCars = Random.Range(0, m_carsList.Count);
+        for(int i = 0; i < m_cars; i++)
+        {
+            
+            if (m_random > 60)
+            {
+                Instantiate(m_carsList[witchCars], m_spawnPoint.position,m_spawnPoint.transform.rotation );
+            }
+            else
+            {
+                Instantiate(m_carsList[witchCars], m_spawnPoint2.position, m_spawnPoint2.transform.rotation);
+            }
             yield return new WaitForSeconds(Random.Range(m_minTime, m_maxTime));
-            int m_random = Random.Range(0, 1);
-            if (m_random == 1)
-            {
-                Instantiate(m_vehicle, m_spawnPoint.position, Quaternion.identity);
-            }
-            else 
-            {
-                Instantiate(m_vehicle2, m_spawnPoint2.position, Quaternion.identity);
-            }
+        }
+            
         
 
     }

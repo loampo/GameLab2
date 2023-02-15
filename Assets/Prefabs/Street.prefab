@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1208050094784022696
+--- !u!1 &1936556352897718279
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,58 +8,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 379299347503011471}
+  - component: {fileID: 7882828865313104717}
   m_Layer: 0
-  m_Name: SPawnPoint1
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &379299347503011471
+--- !u!4 &7882828865313104717
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208050094784022696}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.451, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1936556352897718279}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.025, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1882101760256655085}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2613018671047690220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5340094040022578042}
-  m_Layer: 0
-  m_Name: SPawnPoint2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5340094040022578042
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2613018671047690220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.421, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1882101760256655085}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &6877998906438544198
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,8 +61,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 40, y: 0.1, z: 1}
   m_Children:
-  - {fileID: 379299347503011471}
-  - {fileID: 5340094040022578042}
+  - {fileID: 7882828865313104717}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -170,9 +139,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eceea9ceb3679a4478fca628057e0e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vehicle: {fileID: 3274010137777171789, guid: b2f41e63254e8834e8c363cf515a8a27, type: 3}
-  m_vehicle2: {fileID: 7629293509795273906, guid: 01a553b83e374ee4cbd98705bf0e6198, type: 3}
-  m_spawnPoint: {fileID: 379299347503011471}
-  m_spawnPoint2: {fileID: 5340094040022578042}
+  m_carsList:
+  - {fileID: 2148095891966256152, guid: 061f25c8eb523a941b77dc898758a50f, type: 3}
+  - {fileID: 6343035938453430328, guid: 386126b30d506fb4a848ba63801e08a5, type: 3}
+  - {fileID: 8238215382279825251, guid: 8bb7d1d698331b0478f38034cce14ae3, type: 3}
+  - {fileID: 371956489749737711, guid: 23ad7c8c2eccc0245929588957da087a, type: 3}
+  - {fileID: 2738501286761599289, guid: 9a7b9d8d0e4bfa94cac174292c6be62b, type: 3}
+  - {fileID: 1912299895956822099, guid: 1b50fc46960769f41a8c69bec892c2f9, type: 3}
+  - {fileID: 5231039681268770228, guid: 00e1b46c8a6ae914daf79e64a78fdf04, type: 3}
+  m_spawnPoint: {fileID: 0}
+  m_spawnPoint2: {fileID: 0}
   m_minTime: 1
   m_maxTime: 5

@@ -9,7 +9,7 @@ public class MovementObjects : MonoBehaviour
 
     public void Update()
     {
-        transform.position += new Vector3(Random.Range(m_minSpeedX, m_maxSpeedX) * Time.deltaTime, 0.0f, 0.0f);
+        transform.position += transform.forward*(Random.Range(m_minSpeedX, m_maxSpeedX)) * Time.deltaTime;
     }
 
 
