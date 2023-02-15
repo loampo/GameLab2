@@ -34,6 +34,7 @@ public class GenerateMap : MonoBehaviour
             for (int i = 0; i < terrainInSuccession; i++)
             {
                 //instantiate a new terrain pick from terrainDatas all randomly and put in a terrainHolder
+                //This quaternion identity corresponds to "no rotation" - the object is perfectly aligned with the world or parent axes.
                 GameObject terrain = Instantiate(terrainDatas[whichTerrain].terrain[Random.Range(0, terrainDatas[whichTerrain].terrain.Count)], currentPosition, Quaternion.identity, terrainHolder);
                 currentTerrains.Add(terrain); //add terrain 
                 if (!isStart)
