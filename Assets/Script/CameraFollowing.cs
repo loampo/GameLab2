@@ -10,8 +10,8 @@ public class CameraFollowing : MonoBehaviour
     //private GameObject player;
     //private PlayerMovement playerMovement;
 
-    private Vector3 offset;
-    public float speed=10f;
+    private Vector3 m_offset;
+    public float m_speed=10f;
 
     
     public void Start()
@@ -19,19 +19,19 @@ public class CameraFollowing : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player");
         //playerMovement = player.GetComponent<PlayerMovement>();
 
-        offset = new Vector3(10.08f, 6.25f, -16.74f);
+        m_offset = new Vector3(10.08f, 6.25f, -16.74f);
 
     }
 
     public void Update()
     {
-        if (player.isMove&&!player.facing)
+        if (player.m_isMove&&!player.m_facing)
         {
             Vector3 playerPosition = player.transform.position;
-            transform.position = new Vector3(playerPosition.x, 0, playerPosition.z) + offset;
-        }else if(!player.isMove)
+            transform.position = new Vector3(playerPosition.x, 0, playerPosition.z) + m_offset;
+        }else if(!player.m_isMove)
         {
-            transform.position += new Vector3(0f, 0f, speed * Time.deltaTime);
+            transform.position += new Vector3(0f, 0f, m_speed * Time.deltaTime);
         }/*else if (player.facing)*/
         //{
         //    transform.rotation = new Quaternion(90);
