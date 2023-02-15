@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Street
   m_EditorClassIdentifier: 
   terrain:
-  - {fileID: 6877998906438544198, guid: d806ed59ac9334c41bf2e6ad9e8c6537, type: 3}
+  - {fileID: 1468001449848250654, guid: d806ed59ac9334c41bf2e6ad9e8c6537, type: 3}
   maxTerrainInSuccession: 3
