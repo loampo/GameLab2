@@ -462,6 +462,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 08e4d90d270337a40bcd40cfe0898bfd, type: 2}
   - {fileID: 11400000, guid: 80932038b76110b4eb23607492a93010, type: 2}
   - {fileID: 11400000, guid: 93cf96726c22d6d43ae50d736271b0b3, type: 2}
+  - {fileID: 11400000, guid: 3d2e29ae99c05684eb9e5c1f2d8b8a0a, type: 2}
   terrainHolder: {fileID: 1144577666}
   currentPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1707364213
