@@ -8,8 +8,8 @@ public class TreinScript : MonoBehaviour
     public Transform m_spawnPoint;
     public Transform m_spawnPoint2;
     [SerializeField] private Transform m_carsHolder;
-    private float m_minTime=5f;
-    private float m_maxTime=10f;
+    private float m_minTime=20f;
+    private float m_maxTime=30f;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class TreinScript : MonoBehaviour
             if (m_random > 60)
             {
                 GameObject train = Instantiate(m_train, m_spawnPoint.position, m_spawnPoint.transform.rotation, m_carsHolder);
-                yield return new WaitForSeconds(80);
+                yield return new WaitForSeconds(10);
                 Destroy(train);
 
 
@@ -33,7 +33,7 @@ public class TreinScript : MonoBehaviour
             else
             {
                 GameObject train = Instantiate(m_train, m_spawnPoint2.position, m_spawnPoint2.transform.rotation, m_carsHolder);
-                yield return new WaitForSeconds(80);
+                yield return new WaitForSeconds(10);
                 Destroy(train);
 
             }
