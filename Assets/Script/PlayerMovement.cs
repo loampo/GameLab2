@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -84,6 +85,18 @@ public class PlayerMovement : MonoBehaviour
         
 
     }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Cars"))
+        {
+           Scene currentScene = SceneManager.GetActiveScene();
+           SceneManager.LoadScene(currentScene.name);
+        }
+    }
+
+
     void RotationAndPosition(Vector3 newRotation)
     {
         m_Rb.velocity = Vector3.zero;
