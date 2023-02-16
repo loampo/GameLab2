@@ -8,6 +8,7 @@ public class SpawnTree : MonoBehaviour
     public List<GameObject> m_treeAndStoneList = new List<GameObject>();
     public List<Transform> m_spawnList = new List<Transform>();
     [SerializeField] private Transform m_treeHolder;
+    public GameObject m_coin;
 
 
     // Start is called before the first frame update
@@ -33,7 +34,12 @@ public class SpawnTree : MonoBehaviour
             }
 
         }
-    
+        int m_random = Random.Range(0, 100);
+        if (m_random > 60)
+        {
+            int witchSpawn = Random.Range(0, m_spawnList.Count);
+            Instantiate(m_coin, m_spawnList[witchSpawn].position, Quaternion.identity);
+        }
 
     }
 }

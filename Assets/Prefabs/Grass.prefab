@@ -555,6 +555,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &93856226689189579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3810717441130965624}
+  m_Layer: 0
+  m_Name: SpawnCoin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3810717441130965624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93856226689189579}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8769539925724563903}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204282677171069569
 GameObject:
   m_ObjectHideFlags: 0
@@ -13097,6 +13127,7 @@ Transform:
   - {fileID: 3586259839476315245}
   - {fileID: 4473954688224548221}
   - {fileID: 3479890009159309470}
+  - {fileID: 3810717441130965624}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13170,6 +13201,7 @@ MonoBehaviour:
   - {fileID: 2666761431779136549}
   - {fileID: 7577738353664909387}
   m_treeHolder: {fileID: 4782465467772889672}
+  m_coin: {fileID: 7127782788764914407, guid: 94baa0894e54a3a4a9d0a6b278011fc2, type: 3}
 --- !u!1 &7924383783047786053
 GameObject:
   m_ObjectHideFlags: 0
