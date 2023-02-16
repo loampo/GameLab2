@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float m_scoreCoins = 0f;
     public TextMeshProUGUI m_maxScoreText;
     private Vector3 offsetPlayerDeath;
+    public GameObject lose;
     
 
     // Start is called before the first frame update
@@ -90,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         }
         m_maxScoreText.text = m_score.ToString();
         
+        
 
     }
 
@@ -102,13 +104,15 @@ public class PlayerMovement : MonoBehaviour
             player.SetActive(false);
             playerDeath.transform.position = player.transform.position - offsetPlayerDeath ;
             playerDeath.SetActive(true);
-           // Scene currentScene = SceneManager.GetActiveScene();
-           //SceneManager.LoadScene(currentScene.name);
+            player.SetActive(false);
+            lose.SetActive(true);
+            
         }
         if (other.CompareTag("Water"))
         {
-            Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.name);
+            player.SetActive(false);
+            lose.SetActive(true);
+            
         }
         if (other.CompareTag("Coins"))
         {
@@ -131,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    
 
 
     void RotationAndPosition(Vector3 newRotation)
