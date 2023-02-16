@@ -6798,12 +6798,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012211104e0aaf942932e80b9c4b1184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_logsList: []
-  m_spawnPoint: {fileID: 0}
-  m_spawnPoint2: {fileID: 0}
-  m_minTime: 0
-  m_maxTime: 0
-  m_logsHolder: {fileID: 0}
+  m_logsList:
+  - {fileID: 6785938393507422549, guid: b91c97c743a776f4f9546ec43bc7ebd1, type: 3}
+  - {fileID: 8539255958850611562, guid: 8a8a0b4b84ddb184e9bf22924192c446, type: 3}
+  - {fileID: 7421966620296072605, guid: 9f21e44ea1210114e8f92e21a9e75c48, type: 3}
+  - {fileID: 4704201011179188257, guid: 7eea3759f5d2201449e48f73610041a2, type: 3}
+  - {fileID: 4416286391681420372, guid: f9b4109d1ecdb4445b1951a2c995ed69, type: 3}
+  m_spawnPoint: {fileID: 7347991723790466040}
+  m_spawnPoint2: {fileID: 2831004007575880342}
+  m_minTime: 2
+  m_maxTime: 8
+  m_logsHolder: {fileID: 1068000604664084510}
 --- !u!1 &7117463099020514447
 GameObject:
   m_ObjectHideFlags: 0

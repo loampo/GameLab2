@@ -24,7 +24,7 @@ public class CarSpawn : MonoBehaviour
     {
       
         int m_random = Random.Range(0, 100);
-        int witchCars = Random.Range(0, m_carsList.Count);
+        int witchCars = Random.Range(0, m_carsList.Count );
         for(int i = 0; i < m_cars; i++)
         {
             

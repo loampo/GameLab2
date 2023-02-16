@@ -32,6 +32,7 @@ public class LogSpawn : MonoBehaviour
             {
                 GameObject logs = Instantiate(m_logsList[witchLogs], m_spawnPoint.position, m_spawnPoint.transform.rotation, m_logsHolder);
                 m_logsListDestroy.Add(logs);
+                //logs.transform.Rotate(new Vector3(0, 180, 0));
                 if (m_logsListDestroy.Count > m_maxLogsCount) //control from m_carsListDestroy.Count  and  m_maxCarsCount
                 {
                     Destroy(m_logsListDestroy[0]);//destroy currentCars 
@@ -43,6 +44,7 @@ public class LogSpawn : MonoBehaviour
             {
                 GameObject logs = Instantiate(m_logsList[witchLogs], m_spawnPoint2.position, m_spawnPoint2.transform.rotation, m_logsHolder);
                 m_logsListDestroy.Add(logs);
+                //logs.transform.Rotate(new Vector3(0, 180, 0));
                 if (m_logsListDestroy.Count > m_maxLogsCount) //control from m_carsListDestroy.Count  and  m_maxCarsCount
                 {
                     Destroy(m_logsListDestroy[0]);//destroy currentCars 
