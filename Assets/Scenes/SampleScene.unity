@@ -4622,7 +4622,7 @@ MonoBehaviour:
   m_scoreText: {fileID: 958323840}
   m_scoreTextCoins: {fileID: 1362500081}
   m_maxScoreText: {fileID: 539873527}
-  lose: {fileID: 0}
+  lose: {fileID: 535229859}
 --- !u!54 &317151019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19082,7 +19082,7 @@ MonoBehaviour:
   m_scoreText: {fileID: 958323840}
   m_scoreTextCoins: {fileID: 1362500081}
   m_maxScoreText: {fileID: 539873527}
-  lose: {fileID: 0}
+  lose: {fileID: 535229859}
 --- !u!54 &1277925198 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 9061373985083724953, guid: ec9c9dfcec286ae4e8b58dae06acca07, type: 3}
@@ -26737,7 +26737,7 @@ MonoBehaviour:
   m_scoreText: {fileID: 958323840}
   m_scoreTextCoins: {fileID: 1362500081}
   m_maxScoreText: {fileID: 539873527}
-  lose: {fileID: 0}
+  lose: {fileID: 535229859}
 --- !u!54 &1760378266 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1559121787202218991, guid: a8c76345762d1324597b9ccca8ea4fb7, type: 3}
@@ -35343,6 +35343,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5414330826501107477, guid: 7199385201793284a9bc14454045c3ef, type: 3}
+      propertyPath: lose
+      value: 
+      objectReference: {fileID: 535229859}
     - target: {fileID: 5414330826501107477, guid: 7199385201793284a9bc14454045c3ef, type: 3}
       propertyPath: generateMap
       value: 
