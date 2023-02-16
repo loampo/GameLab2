@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float m_jumpForce = 115f;
     bool m_canJump = false;
     public GenerateMap generateMap;
-    private float speedX ;
+    public LogSpawn logSpawn;
+ 
 
 
 
@@ -87,29 +88,26 @@ public class PlayerMovement : MonoBehaviour
            Scene currentScene = SceneManager.GetActiveScene();
            SceneManager.LoadScene(currentScene.name);
         }
-
+        if (other.CompareTag("Water"))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
+        }
     }
 
-    //public void OnCollisionStay(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Logs")
-    //    {
-    //        transform.position += new Vector3(transform.forward * speedX * Time.deltaTime);
-    //    }
-    //}
-    //private void OnCollisionEnter(Collision collision)
-    //{
+    public void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Logs1")
+        {
+            m_Rb.position += new Vector3(-2 * Time.deltaTime, 0.0f, 0.0f);
+ 
+        }
+        if (collision.gameObject.tag == "Logs")
+        {
+            m_Rb.position += new Vector3(2 * Time.deltaTime, 0.0f, 0.0f);
+        }
+    }
 
-    //        if (collision.collider.GetComponent<MovementObjects>())
-    //        {
-    //            transform.parent = collision.collider.transform;
-    //        }
-    //        else
-    //        {
-    //        transform.parent = null;
-    //        }
-
-    //}
 
 
 

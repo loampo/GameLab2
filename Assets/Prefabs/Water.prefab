@@ -6642,7 +6642,7 @@ GameObject:
   - component: {fileID: 3279335310381408613}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6726,8 +6726,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6877998906438544198}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6752824, y: 1, z: 1}
   m_Center: {x: -0.000099778175, y: 0, z: 0}
@@ -6744,15 +6744,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_logsList:
-  - {fileID: 4416286391681420372, guid: f9b4109d1ecdb4445b1951a2c995ed69, type: 3}
-  - {fileID: 8539255958850611562, guid: 8a8a0b4b84ddb184e9bf22924192c446, type: 3}
-  - {fileID: 7421966620296072605, guid: 9f21e44ea1210114e8f92e21a9e75c48, type: 3}
-  - {fileID: 4704201011179188257, guid: 7eea3759f5d2201449e48f73610041a2, type: 3}
-  - {fileID: 5574746587010979195, guid: 3fbd077bc53bb894889f210616c5e7d8, type: 3}
+  - {fileID: 4595560088763004914, guid: d5b61d59f92bc494cbfc9295082d59c4, type: 3}
+  - {fileID: 4977146103803287230, guid: 948ebf41ff427b74ab52b4dddf555724, type: 3}
+  - {fileID: 2040775984053414213, guid: 7f13b5839dddd3d4d8114ccbebef2347, type: 3}
+  - {fileID: 6336008660991187829, guid: 14ab6fdf3f3f59d49a308a55e3f317e2, type: 3}
+  - {fileID: 7318244043573291095, guid: 820897c466ca9b945b00cf5f1584dbb7, type: 3}
   m_spawnPoint: {fileID: 7347991723790466040}
   m_spawnPoint2: {fileID: 2831004007575880342}
-  m_minTime: 2
-  m_maxTime: 8
+  m_minTime: 1
+  m_maxTime: 5
   m_logsHolder: {fileID: 1068000604664084510}
 --- !u!1 &7117463099020514447
 GameObject:

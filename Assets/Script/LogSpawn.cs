@@ -12,8 +12,8 @@ public class LogSpawn : MonoBehaviour
     public float m_maxTime;
     private float m_logs = 100;
     [SerializeField] private Transform m_logsHolder;
-    private int m_maxLogsCount = 4;
-
+    private int m_maxLogsCount = 5;
+    
 
     private void Start()
     {
@@ -26,13 +26,14 @@ public class LogSpawn : MonoBehaviour
 
         int m_random = Random.Range(0, 100);
         int witchLogs = Random.Range(0, m_logsList.Count);
-        for (float i = 0; i < m_logs; i++)
+        for (float i = 0; i <= m_logs; i++)
         {
 
             if (m_random > 60)
             {
                 GameObject logs = Instantiate(m_logsList[witchLogs], m_spawnPoint.position, m_spawnPoint.transform.rotation, m_logsHolder);
                 m_logsListDestroy.Add(logs);
+                logs.tag= "Logs1";
                 //logs.transform.Rotate(new Vector3(0, 180, 0));
                 if (m_logsListDestroy.Count > m_maxLogsCount) //control from m_carsListDestroy.Count  and  m_maxCarsCount
                 {
@@ -45,6 +46,7 @@ public class LogSpawn : MonoBehaviour
             {
                 GameObject logs = Instantiate(m_logsList[witchLogs], m_spawnPoint2.position, m_spawnPoint2.transform.rotation, m_logsHolder);
                 m_logsListDestroy.Add(logs);
+                logs.tag ="Logs";
                 //logs.transform.Rotate(new Vector3(0, 180, 0));
                 if (m_logsListDestroy.Count > m_maxLogsCount) //control from m_carsListDestroy.Count  and  m_maxCarsCount
                 {
