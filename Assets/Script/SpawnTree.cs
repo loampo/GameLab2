@@ -18,13 +18,20 @@ public class SpawnTree : MonoBehaviour
 
     private void  SpawnTreeAndStone()
     {
-        int witchTreeAndStone = Random.Range(0, m_treeAndStoneList.Count );
-        int witchSpawn = Random.Range(0, m_spawnList.Count );
-        for(int i=0; i < 5; i++)
+
+        var index = 7;
+        for (int i=0; i < 4; i++)
         {
+            int witchTreeAndStone = Random.Range(0, m_treeAndStoneList.Count);
+            int witchSpawn = Random.Range(0, m_spawnList.Count);
             GameObject treesAndStone = Instantiate(m_treeAndStoneList[witchTreeAndStone], m_spawnList[witchSpawn].position, Quaternion.identity, m_treeHolder);
-            m_spawnList.RemoveAt(0);
-            m_treeAndStoneList.RemoveAt(0);
+            m_spawnList.RemoveAt(witchSpawn);
+            if (m_treeAndStoneList.Count > 0 && index < m_treeAndStoneList.Count && m_spawnList.Count > 0 && index < m_spawnList.Count)
+            {
+                m_treeAndStoneList.RemoveAt(0);
+
+            }
+
         }
     
 
