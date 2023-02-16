@@ -8,11 +8,11 @@ public class PlayerMovement : MonoBehaviour
 {
     
     public Rigidbody m_Rb;
-    public float m_jumpForce = 100f;
+    public float m_jumpForce = 115f;
     bool m_canJump = false;
     public GenerateMap generateMap;
-    public bool m_isMove;
-    public bool m_facing;
+    private float speedX ;
+
 
 
 
@@ -38,8 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
                 if (Input.GetKey(KeyCode.UpArrow)) 
                 {
-                    m_facing = false;
-                    m_isMove = true;
+    
                     RotationAndPosition(new Vector3(0, 0, 0));
                     //addForce physic movement 
                     m_Rb.AddForce(new Vector3(0, m_jumpForce, m_jumpForce));
@@ -49,8 +48,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else if (Input.GetKey(KeyCode.RightArrow))
                 {
-                    m_facing = true;
-                    m_isMove = true;
+
                     RotationAndPosition(new Vector3(0, 90, 0));
                     //addForce physic movement 
                     m_Rb.AddForce(new Vector3(m_jumpForce, m_jumpForce, 0));
@@ -59,8 +57,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    m_facing = false;
-                    m_isMove = true;
+
                     RotationAndPosition(new Vector3(0, 180, 0));
                     //addForce physic movement 
                     m_Rb.AddForce(new Vector3(0, m_jumpForce, -m_jumpForce)); 
@@ -69,19 +66,15 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else if (Input.GetKey(KeyCode.LeftArrow))
                 {
-                    m_facing = true;
-                    m_isMove = true;
+
                     RotationAndPosition(new Vector3(0, -90, 0));
                     //addForce physic movement 
-                    m_Rb.AddForce(new Vector3(-m_jumpForce, m_jumpForce, 0));
+                    m_Rb.AddForce (new Vector3 (-m_jumpForce, m_jumpForce, 0));
                     moveCharacter(new Vector3(0, 0, 1));
                     
                 }
         }
-        else
-        {
-            m_isMove = false;
-        }
+       
         
 
     }
@@ -94,7 +87,30 @@ public class PlayerMovement : MonoBehaviour
            Scene currentScene = SceneManager.GetActiveScene();
            SceneManager.LoadScene(currentScene.name);
         }
+
     }
+
+    public void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Logs")
+        {
+            transform.position += new Vector3(transform.forward * speedX * Time.deltaTime);
+        }
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+
+    //        if (collision.collider.GetComponent<MovementObjects>())
+    //        {
+    //            transform.parent = collision.collider.transform;
+    //        }
+    //        else
+    //        {
+    //        transform.parent = null;
+    //        }
+
+    //}
+
 
 
     void RotationAndPosition(Vector3 newRotation)

@@ -14,6 +14,7 @@ public class LogSpawn : MonoBehaviour
     [SerializeField] private Transform m_logsHolder;
     private int m_maxLogsCount = 4;
 
+
     private void Start()
     {
         StartCoroutine(SpawnLogs());
