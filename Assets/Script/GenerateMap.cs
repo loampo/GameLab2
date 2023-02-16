@@ -29,13 +29,13 @@ public class GenerateMap : MonoBehaviour
     {
         if ((currentPosition.z - playerPos.z < m_minDistanceFromPlayer)||(isStart))//distancefrom player 
         {
-            int whichTerrain = Random.Range(0, terrainDatas.Count); //take randomly from terrainDatas 
-            int terrainInSuccession = Random.Range(1, terrainDatas[whichTerrain].maxTerrainInSuccession); //take randomly from terrainDatas the succession of it
+            int whichTerrain = Random.Range(0, terrainDatas.Count ); //take randomly from terrainDatas 
+            int terrainInSuccession = Random.Range(1, terrainDatas[whichTerrain].maxTerrainInSuccession ); //take randomly from terrainDatas the succession of it
             for (int i = 0; i < terrainInSuccession; i++)
             {
                 //instantiate a new terrain pick from terrainDatas all randomly and put in a terrainHolder
                 //This quaternion identity corresponds to "no rotation" - the object is perfectly aligned with the world or parent axes.
-                GameObject terrain = Instantiate(terrainDatas[whichTerrain].terrain[Random.Range(0, terrainDatas[whichTerrain].terrain.Count)], currentPosition, Quaternion.identity, terrainHolder);
+                GameObject terrain = Instantiate(terrainDatas[whichTerrain].terrain[Random.Range(0, terrainDatas[whichTerrain].terrain.Count - 1)], currentPosition, Quaternion.identity, terrainHolder);
                 currentTerrains.Add(terrain); //add terrain 
                 if (!isStart)
                 {

@@ -3232,11 +3232,11 @@ MonoBehaviour:
   - {fileID: 2738501286761599289, guid: 9a7b9d8d0e4bfa94cac174292c6be62b, type: 3}
   - {fileID: 1912299895956822099, guid: 1b50fc46960769f41a8c69bec892c2f9, type: 3}
   - {fileID: 5231039681268770228, guid: 00e1b46c8a6ae914daf79e64a78fdf04, type: 3}
-  m_spawnPoint: {fileID: 0}
-  m_spawnPoint2: {fileID: 0}
+  m_spawnPoint: {fileID: 6270810776046626989}
+  m_spawnPoint2: {fileID: 5754386486090866515}
   m_minTime: 3
   m_maxTime: 8
-  m_carsHolder: {fileID: 0}
+  m_carsHolder: {fileID: 6820161602402563031}
 --- !u!1 &1560279306659418547
 GameObject:
   m_ObjectHideFlags: 0

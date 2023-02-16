@@ -24,10 +24,11 @@ public class CarSpawn : MonoBehaviour
     {
       
         int m_random = Random.Range(0, 100);
-        int witchCars = Random.Range(0, m_carsList.Count);
+        //int witchCars = Random.Range(0, m_carsList.Count );
         for(int i = 0; i < m_cars; i++)
         {
             
+            int witchCars = Random.Range(0, m_carsList.Count);
             if (m_random > 60)
             {
                 GameObject cars= Instantiate(m_carsList[witchCars], m_spawnPoint.position,m_spawnPoint.transform.rotation,m_carsHolder );
