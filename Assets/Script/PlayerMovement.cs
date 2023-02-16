@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -12,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     bool m_canJump = false;
     public GenerateMap generateMap;
     public LogSpawn logSpawn;
- 
+    public TextMeshProUGUI m_scoreText;
+    private float m_score = 0f;
 
 
 
@@ -44,7 +47,9 @@ public class PlayerMovement : MonoBehaviour
                     //addForce physic movement 
                     m_Rb.AddForce(new Vector3(0, m_jumpForce, m_jumpForce));
                     moveCharacter(new Vector3(1, 0, 0));
-                    
+                    m_score += 1f;
+                    m_scoreText.text = m_score.ToString();
+
 
                 }
                 else if (Input.GetKey(KeyCode.RightArrow))
@@ -63,7 +68,9 @@ public class PlayerMovement : MonoBehaviour
                     //addForce physic movement 
                     m_Rb.AddForce(new Vector3(0, m_jumpForce, -m_jumpForce)); 
                     moveCharacter(new Vector3(-1, 0, 0));
-
+                    m_score -= 1f;
+                    m_scoreText.text = m_score.ToString();
+                
                 }
                 else if (Input.GetKey(KeyCode.LeftArrow))
                 {
