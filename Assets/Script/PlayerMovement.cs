@@ -90,13 +90,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Logs")
-        {
-            transform.position += new Vector3(transform.forward * speedX * Time.deltaTime);
-        }
-    }
+    //public void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Logs")
+    //    {
+    //        transform.position += new Vector3(transform.forward * speedX * Time.deltaTime);
+    //    }
+    //}
     //private void OnCollisionEnter(Collision collision)
     //{
 
