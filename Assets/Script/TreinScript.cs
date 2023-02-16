@@ -8,6 +8,8 @@ public class TreinScript : MonoBehaviour
     public Transform m_spawnPoint;
     public Transform m_spawnPoint2;
     [SerializeField] private Transform m_carsHolder;
+    private float m_minTime=5f;
+    private float m_maxTime=10f;
 
     private void Start()
     {
@@ -17,7 +19,7 @@ public class TreinScript : MonoBehaviour
 
     private IEnumerator SpawnVehicle()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(Random.Range(m_minTime, m_maxTime));
         int m_random = Random.Range(0, 100);
         //int witchCars = Random.Range(0, m_carsList.Count );
             if (m_random > 60)
