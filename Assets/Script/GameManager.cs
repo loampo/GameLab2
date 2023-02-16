@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
 
     // Update is called once per frame
     void Update()
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
             Pause();
         }
     }
-
+    
     private void Pause()
     {
         if (Time.timeScale == 0)

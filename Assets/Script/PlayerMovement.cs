@@ -6,23 +6,29 @@ using TMPro;
 using UnityEngine.UI;
 
 
+
 public class PlayerMovement : MonoBehaviour
 {
     
     public Rigidbody m_Rb;
+    public GameObject player;
+    public GameObject playerDeath;
     public float m_jumpForce = 115f;
     bool m_canJump = false;
     public GenerateMap generateMap;
     public LogSpawn logSpawn;
     public TextMeshProUGUI m_scoreText;
     private float m_score = 0f;
-
-
-
+    public TextMeshProUGUI m_scoreTextCoins;
+    private float m_scoreCoins = 0f;
+    public TextMeshProUGUI m_maxScoreText;
+    private Vector3 offsetPlayerDeath;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
         m_Rb = GetComponent<Rigidbody>();
     }
 
@@ -82,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
                     
                 }
         }
-       
+        m_maxScoreText.text = m_score.ToString();
         
 
     }
@@ -92,13 +98,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("Cars"))
         {
-           Scene currentScene = SceneManager.GetActiveScene();
-           SceneManager.LoadScene(currentScene.name);
+            offsetPlayerDeath = new Vector3(0f, 0.4f, 0f);
+            player.SetActive(false);
+            playerDeath.transform.position = player.transform.position - offsetPlayerDeath ;
+            playerDeath.SetActive(true);
+           // Scene currentScene = SceneManager.GetActiveScene();
+           //SceneManager.LoadScene(currentScene.name);
         }
         if (other.CompareTag("Water"))
         {
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
+        }
+        if (other.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
+            m_scoreCoins += 1f;
+            m_scoreTextCoins.text = m_scoreCoins.ToString();
         }
     }
 
