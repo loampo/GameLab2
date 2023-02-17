@@ -91,7 +91,14 @@ public class PlayerMovement : MonoBehaviour
                 m_Rb.AddForce(new Vector3(-m_jumpForce, m_jumpForce, 0));
                 moveCharacter(new Vector3(0, 0, 1));
             }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                m_score += 10;
+                int m_scoreCoins = PlayerPrefs.GetInt("coin", 0);
+                m_scoreCoins += 10;
+            }
         }
+        
 
     }
 
