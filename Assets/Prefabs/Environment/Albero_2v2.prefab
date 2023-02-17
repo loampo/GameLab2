@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1067313365400685034
+--- !u!1 &8183842536441586112
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7409623706680328331}
-  - component: {fileID: 4889871148615613866}
-  - component: {fileID: 1894645679846886351}
-  - component: {fileID: 252855815268886961}
+  - component: {fileID: 8988052136918687575}
+  - component: {fileID: 7532787005949953291}
+  - component: {fileID: 8631020288658473496}
+  - component: {fileID: 6412166171195094567}
   m_Layer: 0
-  m_Name: Albero_4
+  m_Name: Albero_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7409623706680328331
+--- !u!4 &8988052136918687575
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067313365400685034}
+  m_GameObject: {fileID: 8183842536441586112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.637, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
-  m_Father: {fileID: 7409623705471061368}
+  m_Father: {fileID: 1032982507950813642}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4889871148615613866
+--- !u!33 &7532787005949953291
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067313365400685034}
-  m_Mesh: {fileID: 3350832067597331663, guid: 2efa102c0818c4a40a4153e276d6eb0f, type: 3}
---- !u!23 &1894645679846886351
+  m_GameObject: {fileID: 8183842536441586112}
+  m_Mesh: {fileID: 5824778438718555794, guid: 2efa102c0818c4a40a4153e276d6eb0f, type: 3}
+--- !u!23 &8631020288658473496
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067313365400685034}
+  m_GameObject: {fileID: 8183842536441586112}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,20 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &252855815268886961
+--- !u!65 &6412166171195094567
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067313365400685034}
+  m_GameObject: {fileID: 8183842536441586112}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 192, z: 100}
+  m_Size: {x: 100, y: 120, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &7409623705471061371
+--- !u!1 &8709510662416817667
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,26 +103,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7409623705471061368}
+  - component: {fileID: 1032982507950813642}
   m_Layer: 0
-  m_Name: Albero_4v2
+  m_Name: Albero_2v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7409623705471061368
+--- !u!4 &1032982507950813642
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7409623705471061371}
+  m_GameObject: {fileID: 8709510662416817667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7409623706680328331}
+  - {fileID: 8988052136918687575}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

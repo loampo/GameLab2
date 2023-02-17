@@ -18,9 +18,10 @@ public class PlayerMovement : MonoBehaviour
     public GenerateMap generateMap;
     public LogSpawn logSpawn;
     public TextMeshProUGUI m_scoreText;
-    private float m_score = 0f;
+    private int m_score = 0;
     public TextMeshProUGUI m_scoreTextCoins;
-    private float m_scoreCoins = 0f;
+    //private int m_scoreCoins = 0;
+    private int m_maxScore = 0;
     public TextMeshProUGUI m_maxScoreText;
     private Vector3 offsetPlayerDeath;
     public GameObject lose;
@@ -31,67 +32,66 @@ public class PlayerMovement : MonoBehaviour
     {
 
         m_Rb = GetComponent<Rigidbody>();
+        int savedScore = PlayerPrefs.GetInt("MaxScore", 0);
+        m_maxScoreText.text = "" + savedScore;
+        int savedCoin = PlayerPrefs.GetInt("coin", 0);
+        m_scoreTextCoins.text = "" + savedCoin;
     }
 
     void FixedUpdate()
     {
-        if(Mathf.Abs(m_Rb.velocity.y) < 0.001f) //Ground check
+        if (Mathf.Abs(m_Rb.velocity.y) < 0.001f) //Ground check
         {
             m_canJump = true;
-
         }
         else
         {
             m_canJump = false;
-
         }
-        if (m_canJump) 
+        if (m_canJump)
         {
-                if (Input.GetKey(KeyCode.UpArrow)) 
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                RotationAndPosition(new Vector3(0, 0, 0));
+                //addForce physic movement 
+                m_Rb.AddForce(new Vector3(0, m_jumpForce, m_jumpForce));
+                moveCharacter(new Vector3(1, 0, 0));
+                m_score++;
+                m_scoreText.text = m_score.ToString();
+                int m_MaxScore = PlayerPrefs.GetInt("MaxScore", 0);
+                if (m_score > m_MaxScore)
                 {
-    
-                    RotationAndPosition(new Vector3(0, 0, 0));
-                    //addForce physic movement 
-                    m_Rb.AddForce(new Vector3(0, m_jumpForce, m_jumpForce));
-                    moveCharacter(new Vector3(1, 0, 0));
-                    m_score += 1f;
-                    m_scoreText.text = m_score.ToString();
-
-
+                    m_MaxScore = m_score;
+                    PlayerPrefs.SetInt("MaxScore", m_MaxScore);
+                    PlayerPrefs.Save();
+                    Debug.Log("MaxScore: " + m_MaxScore);
                 }
-                else if (Input.GetKey(KeyCode.RightArrow))
-                {
-
-                    RotationAndPosition(new Vector3(0, 90, 0));
-                    //addForce physic movement 
-                    m_Rb.AddForce(new Vector3(m_jumpForce, m_jumpForce, 0));
-                    moveCharacter(new Vector3(0, 0, -1));
-                    
-                }
-                else if (Input.GetKey(KeyCode.DownArrow))
-                {
-
-                    RotationAndPosition(new Vector3(0, 180, 0));
-                    //addForce physic movement 
-                    m_Rb.AddForce(new Vector3(0, m_jumpForce, -m_jumpForce)); 
-                    moveCharacter(new Vector3(-1, 0, 0));
-                    m_score -= 1f;
-                    m_scoreText.text = m_score.ToString();
-                
-                }
-                else if (Input.GetKey(KeyCode.LeftArrow))
-                {
-
-                    RotationAndPosition(new Vector3(0, -90, 0));
-                    //addForce physic movement 
-                    m_Rb.AddForce (new Vector3 (-m_jumpForce, m_jumpForce, 0));
-                    moveCharacter(new Vector3(0, 0, 1));
-                    
-                }
+                m_maxScoreText.text = m_MaxScore.ToString();
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                RotationAndPosition(new Vector3(0, 90, 0));
+                //addForce physic movement 
+                m_Rb.AddForce(new Vector3(m_jumpForce, m_jumpForce, 0));
+                moveCharacter(new Vector3(0, 0, -1));
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                RotationAndPosition(new Vector3(0, 180, 0));
+                //addForce physic movement 
+                m_Rb.AddForce(new Vector3(0, m_jumpForce, -m_jumpForce));
+                moveCharacter(new Vector3(-1, 0, 0));
+                m_score--;
+                m_scoreText.text = m_score.ToString();
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                RotationAndPosition(new Vector3(0, -90, 0));
+                //addForce physic movement 
+                m_Rb.AddForce(new Vector3(-m_jumpForce, m_jumpForce, 0));
+                moveCharacter(new Vector3(0, 0, 1));
+            }
         }
-        m_maxScoreText.text = m_score.ToString();
-        
-        
 
     }
 
@@ -106,19 +106,22 @@ public class PlayerMovement : MonoBehaviour
             playerDeath.SetActive(true);
             player.SetActive(false);
             lose.SetActive(true);
-            
         }
         if (other.CompareTag("Water"))
         {
             player.SetActive(false);
             lose.SetActive(true);
-            
         }
         if (other.CompareTag("Coins"))
         {
             Destroy(other.gameObject);
-            m_scoreCoins += 1f;
+            int m_scoreCoins = PlayerPrefs.GetInt("coin", 0);
+            m_scoreCoins += 1;
+            PlayerPrefs.SetInt("coin", m_scoreCoins);
+            PlayerPrefs.Save();
             m_scoreTextCoins.text = m_scoreCoins.ToString();
+            Debug.Log("Coin: " + m_scoreCoins);
+            PlayerPrefs.SetInt("coin", m_scoreCoins);
         }
     }
 
@@ -126,8 +129,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Logs1")
         {
-            m_Rb.position += new Vector3(-2 * Time.deltaTime, 0.0f, 0.0f);
- 
+            m_Rb.position += new Vector3(-2 * Time.deltaTime, 0.0f, 0.0f); 
         }
         if (collision.gameObject.tag == "Logs")
         {

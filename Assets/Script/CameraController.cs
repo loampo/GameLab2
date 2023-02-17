@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;
-    public float distance = 10f;
+    //public Transform target;
+    public float distance = 8f;
 
 
-    void Update()
+    //void Update()
+    //{
+    //    //transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
+    //    transform.position = target.position - transform.forward * distance;
+    //}
+
+    public string m_tagToFollow;
+
+    private void LateUpdate()
     {
-        //transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
-        transform.position = target.position - transform.forward * distance;
+        GameObject objectToFollow = GameObject.FindWithTag(m_tagToFollow);
+        if (objectToFollow != null)
+        {
+            transform.position = objectToFollow.transform.position - transform.forward * distance;
+        }
     }
 }

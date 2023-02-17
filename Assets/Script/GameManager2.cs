@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Update()
+        void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -31,8 +30,9 @@ public class GameManager2 : MonoBehaviour
 
     public void RestartGame()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        //Scene currentScene = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene(currentScene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ReturnLobby()
