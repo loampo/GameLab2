@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5169110226515590732}
   m_Layer: 0
   m_Name: FullTrain
-  m_TagString: Untagged
+  m_TagString: Cars
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649368076649259614}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6363008, y: 0.4813257, z: 6.5352745}
@@ -118,6 +118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: treno fornt (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3420031d80141b249a1a236e78edb675, type: 3}
+      propertyPath: m_TagString
+      value: Cars
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3420031d80141b249a1a236e78edb675, type: 3}
 --- !u!4 &1047576945427660209 stripped
@@ -176,9 +180,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6010417393172582316, guid: 70d7a5b264d17dc42a8548df194f4b6a, type: 3}
+      propertyPath: m_TagString
+      value: Cars
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70d7a5b264d17dc42a8548df194f4b6a, type: 3}
       propertyPath: m_Name
       value: treno back (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 70d7a5b264d17dc42a8548df194f4b6a, type: 3}
+      propertyPath: m_TagString
+      value: Cars
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d7a5b264d17dc42a8548df194f4b6a, type: 3}
@@ -242,6 +254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: treno fornt (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3420031d80141b249a1a236e78edb675, type: 3}
+      propertyPath: m_TagString
+      value: Cars
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3420031d80141b249a1a236e78edb675, type: 3}
 --- !u!4 &1047576944793804730 stripped
@@ -300,9 +316,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -308553820332101531, guid: e15712a8e5092e948a56c273225e0a0e, type: 3}
+      propertyPath: m_TagString
+      value: Cars
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e15712a8e5092e948a56c273225e0a0e, type: 3}
       propertyPath: m_Name
       value: treno middle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e15712a8e5092e948a56c273225e0a0e, type: 3}
+      propertyPath: m_TagString
+      value: Cars
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15712a8e5092e948a56c273225e0a0e, type: 3}
