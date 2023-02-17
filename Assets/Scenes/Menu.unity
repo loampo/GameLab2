@@ -815,6 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 1984091281}
   skin: {fileID: 1153243503}
+  gameManager: {fileID: 585354837}
 --- !u!4 &585354839
 Transform:
   m_ObjectHideFlags: 0
@@ -1558,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1153243504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2174,7 +2175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1984091282
 RectTransform:
   m_ObjectHideFlags: 0

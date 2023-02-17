@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager2 : MonoBehaviour
 {
-        void Update()
+
+    public GameObject pause;
+
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -14,16 +17,17 @@ public class GameManager2 : MonoBehaviour
         }
     }
 
-    private void Pause()
+    public void Pause()
     {
         if (Time.timeScale == 0)
         {
-            //nPause.SetActive(false);
+            pause.SetActive(false);
             Time.timeScale = 1;
+
         }
         else if (Time.timeScale == 1)
         {
-            //nPause.SetActive(true);
+            pause.SetActive(true);
             Time.timeScale = 0;
         }
     }
@@ -40,6 +44,5 @@ public class GameManager2 : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    
 
 }

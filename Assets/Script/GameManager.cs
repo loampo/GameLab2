@@ -6,11 +6,16 @@ public class GameManager : MonoBehaviour
 {
     public GameObject menu;
     public GameObject skin;
+    public GameObject gameManager;
+
 
 
     // Update is called once per frame
-    
 
+    private void Start()
+    {
+        DontDestroyOnLoad(gameManager);
+    }
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
