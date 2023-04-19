@@ -7,14 +7,12 @@ public class CameraFollowing : MonoBehaviour
 
     public PlayerMovement player;
 
-
     private Vector3 m_offset;
-    public float m_speed=10f;
 
     
     public void Start()
     {
-        m_offset = new Vector3(10.08f, 6.25f, -16.74f);
+        m_offset = new Vector3(1f, 1f, -11f);
     }
 
     public void Update()

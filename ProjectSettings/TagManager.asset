@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cars
+  - Logs
+  - Logs1
+  - Water
+  - Coins
   layers:
   - Default
   - TransparentFX
